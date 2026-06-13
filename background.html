@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kata Pengantar - Onaki Jaya Group</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+nav{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:22px 0;
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    color:white;
+    font-size:24px;
+    font-weight:700;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+}
+
+.nav-links{
+    display:flex;
+    gap:40px;
+    list-style:none;
+}
+
+    .dropdown{
+      position: relative;
+    }
+
+    .dropdown-menu{
+      position: absolute;
+      top: 35px;
+      left: 0;
+      min-width: 260px;
+      background: #163b68;
+      border-radius: 10px;
+      padding: 12px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      z-index: 999;
+    }
+
+    .dropdown-menu li{
+      width: 100%;
+    }
+
+    .dropdown-menu a{
+      display: block;
+      padding: 14px 22px;
+      color: white !important;
+      font-size: 15px !important;
+      font-weight: 500;
+      text-shadow: none !important;
+    }
+
+    .dropdown-menu a:hover{
+      background: #0d5ca6;
+      color: white !important;
+    }
+
+    .dropdown:hover .dropdown-menu{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+.nav-links a{
+    color:white;
+    font-size:16px;
+    font-weight:500;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#00AEEF;
+}
+
+.hamburger {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f9fb;
+    color:#222;
+}
+
+/* HERO */
+.hero{
+    height:72vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url('aset/pabrik.png') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding:0 80px; 
+}
+
+.hero-content{
+    max-width:900px;
+    color:white;
+}
+
+.breadcrumb{
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:44px;
+    font-weight:800;
+    margin-bottom:24px;
+}
+
+.hero p{
+    font-size:17px;
+    line-height:1.9;
+    max-width:900px;
+}
+
+/* CONTENT */
+.section{
+    padding:90px 0;
+}
+
+.content-container{
+    width:90%;
+    max-width:980px;
+    margin:auto;
+}
+
+.section h2{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:28px;
+    color:#111;
+}
+
+.highlight{
+    color:#0f4c81;
+    font-size:18px;
+    font-weight:500;
+    line-height:1.8;
+    margin-bottom:34px;
+    text-align: justify;
+}
+
+.section p{
+    font-size:16px;
+    line-height:2;
+    color:#444;
+    margin-bottom:24px;
+    text-align: justify;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:18px;
+    padding:14px 34px;
+    border:2px solid #1e73be;
+    border-radius:40px;
+    color:#1e73be;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#1e73be;
+    color:white;
+}
+
+/* FOOTER */
+    .footer {
+      background: #f8f8f8;
+      padding: 50px 8% 20px;
+      margin-top: 60px;
+      border-top: 1px solid #ddd;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+    }
+
+    .footer-col h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .footer-col p,
+    .footer-col li,
+    .footer-col a {
+      font-size: 14px;   /* ini yang kamu mau */
+      line-height: 1.8;
+      color: #444;
+      text-decoration: none;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a:hover {
+      color: #0d5ca6;
+    }
+
+    .direction-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #0d5ca6;
+    }
+
+    .footer-bottom {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+
+    body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#fff;
+    color:#222;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+
+  nav{
+    padding:12px 0;
+    background:rgba(0,0,0,0.55);
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+}
+
+.logo{
+    font-size:14px;
+    gap:8px;
+}
+
+.logo img{
+    width:36px;
+    height:36px;
+}
+
+.hamburger{
+    display:block;
+    font-size:32px;
+    color:white;
+    cursor:pointer;
+    z-index:1001;
+}
+
+.nav-links{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:80%;
+    height:100vh;
+    background:rgba(0,0,0,0.95);
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+
+    transition:0.4s ease;
+    z-index:1000;
+}
+
+.nav-links.active{
+    right:0;
+}
+
+.nav-links a{
+    color:white;
+    font-size:22px;
+}
+
+.dropdown-menu{
+    display:none;
+}
+
+  .hero{
+    padding:0 20px;
+    height:420px;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .hero p{
+    font-size:14px;
+    text-align: justify;
+  }
+
+  .section{
+    padding:50px 0;
+  }
+
+  .section h2{
+    font-size:28px;
+  }
+
+  .section p{
+    font-size:14px;
+    text-align:justify;
+  }
+
+  .footer-container{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="aset/logo.png">
+      <span>ONAKI JAYA GROUP</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+    ☰
+    </div>
+
+    <ul class="nav-links">
+  <li><a href="index.html">Beranda</a></li>
+
+  <li class="dropdown">
+    <a href="#">Tentang Kami ▾</a>
+
+    <ul class="dropdown-menu">
+      <li><a href="about.html">Profil Perusahaan</a></li>
+      <li><a href="about.html#vision">visi</a></li>
+      <li><a href="about.html#mission">Misi</a></li>
+      <li><a href="about.html#logo">Makna Logo</a></li>
+    </ul>
+  </li>
+
+  <li><a href="contact.html">Kontak Kami</a></li>
+</ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="breadcrumb">Beranda / Kata Pengantar</div>
+        <h1>Kata Pengantar</h1>
+        <p>
+            Memahami perjalanan, komitmen, dan peran strategis Onaki Jaya Group
+            dalam mendukung distribusi minyak goreng dan bahan pangan nasional.
+        </p>
+    </div>
+</section>
+
+<!-- CONTENT -->
+<section class="section">
+    <div class="content-container">
+        <h2>Onaki Jaya Group</h2>
+
+        <div class="highlight">
+            Onaki Jaya Group hadir sebagai bagian penting dalam rantai distribusi
+            pangan nasional dengan fokus pada ketersediaan, kualitas, dan
+            keberlanjutan distribusi.
+        </div>
+
+        <p>
+            Onaki Jaya Group merupakan perusahaan yang bergerak di bidang distribusi
+            minyak goreng dan bahan pangan yang memiliki peran penting dalam
+            memenuhi kebutuhan masyarakat. Sebagai bagian dari rantai distribusi
+            pangan nasional, perusahaan hadir untuk memastikan ketersediaan produk
+            yang berkualitas agar dapat menjangkau berbagai lapisan masyarakat
+            secara merata dan berkelanjutan.
+        </p>
+
+        <p>
+            Dalam menjalankan aktivitas bisnisnya, Onaki Jaya Group senantiasa
+            menjaga pertumbuhan perusahaan secara berkelanjutan melalui penyediaan
+            produk yang andal, sistem distribusi yang efisien, serta penerapan
+            standar operasional yang profesional. Komitmen ini menjadi landasan
+            utama perusahaan dalam membangun kepercayaan dan kemitraan jangka
+            panjang dengan seluruh mitra bisnis.
+        </p>
+
+        <p>
+            Seiring dengan perkembangan industri pangan nasional yang semakin
+            dinamis, kebutuhan akan sistem distribusi yang cepat, tepat, dan
+            terpercaya menjadi semakin penting. Oleh karena itu, Onaki Jaya Group
+            terus berinovasi dalam meningkatkan kualitas layanan, memperluas
+            jaringan distribusi, serta mengoptimalkan sistem operasional agar
+            mampu menjawab tantangan pasar yang terus berkembang.
+        </p>
+
+        <p>
+            Onaki Jaya Group percaya bahwa pertumbuhan bisnis yang sehat tidak
+            hanya berfokus pada keuntungan perusahaan, tetapi juga harus
+            memberikan dampak positif bagi individu, pelaku usaha, lingkungan,
+            dan komunitas. Dengan semangat kolaborasi, perusahaan terus bergerak
+            bersama berbagai pihak untuk mendorong pertumbuhan ekonomi dan
+            memperkuat ketahanan pangan nasional.
+        </p>
+
+        <p>
+            Melalui komitmen terhadap kualitas, pelayanan, dan keberlanjutan,
+            Onaki Jaya Group berupaya menjadi mitra distribusi terpercaya yang
+            mampu memahami setiap kebutuhan serta permintaan pasar. Dengan
+            demikian, perusahaan tidak hanya mendistribusikan produk minyak
+            goreng dan bahan pangan, tetapi juga berkontribusi dalam mendukung
+            kemajuan bisnis dan kesejahteraan masyarakat secara berkelanjutan.
+        </p>
+
+        <a href="about.html" class="btn">Baca Profil Perusahaan →</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Kolom 1 -->
+    <div class="footer-col">
+      <h3>Alamat</h3>
+      <p>
+        Jl. Raya Randegansari No.25-26, Dusun Gadung, Gadung,<br>
+        Kec. Driyorejo, Kabupaten Gresik, Jawa Timur
+      </p>
+
+      <a 
+        href="https://www.google.com/maps/dir//GVS+Cafe+%26+Car+Modified,+Jl.+Raya+Randegansari+No.25-26,+Dusun+Gadung,+Gadung,+Kec.+Driyorejo,+Kabupaten+Gresik,+Jawa+Timur+61177/@-7.952639,112.6079458,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2dd7fda84fc29ddb:0xdbdeda35e986a759!2m2!1d112.6344636!2d-7.3158946?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        class="direction-link"
+      >
+        Lihat Lokasi →
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Layanan Pelanggan</h3>
+
+      <p><strong>Email:</strong></p>
+      <p>pt.onakijayagroup@onakigroup.com</p>
+
+      <br>
+
+      <p><strong>Telepon:</strong></p>
+      <p>+6281216177518</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Menu Utama</h3>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li><a href="about.html">Profil Perusahaan</a></li>
+        <li><a href="about.html">Visi</a></li>
+        <li><a href="about.html">Misi</a></li>
+        <li><a href="about.html">Makna Logo</a></li>
+        <li><a href="about.html">Kontak</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 PT Onaki Jaya Group. Seluruh Hak Cipta Dilindungi.
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+
+    if(navLinks.classList.contains("active")){
+        hamburger.innerHTML = "✕";
+    } else {
+        hamburger.innerHTML = "☰";
+    }
+});
+</script>
+
+</body>
+</html>
